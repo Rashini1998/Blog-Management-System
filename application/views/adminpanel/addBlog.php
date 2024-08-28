@@ -13,11 +13,12 @@
         <div class="form-group">
             <label for="blog_desc">Image Description</label>
             <!-- <input type="text" class="form-control" id="blog_desc" placeholder="Description"> -->
-            <textarea class="form-control" rows="3" id="blog_desc" placeholder="Description" name="blog_desc"></textarea>
+            <textarea class="form-control" rows="3" id="blog_desc" placeholder="Description"
+                name="blog_desc"></textarea>
         </div>
         <div class="form-group">
             <label for="blog_img">Image</label>
-            <input type="file" id="blog_img"  name="blog_img">
+            <input type="file" id="blog_img" name="blog_img">
         </div>
         <button type="submit" class="btn btn-primary">Add Blog</button>
 
@@ -30,16 +31,16 @@
 
 
 <!-- check sessions -->
- <script type="text/javascript">
-    <?php 
+<script type="text/javascript">
+<?php 
     if (isset($_SESSION['inserted'])) {
         if($_SESSION['inserted']=="yes"){
             echo "alert('Data Inserted Successfully')";
+            
         }else{
             echo "alert('Not Inserted ')";
         }
-        
-        # code...
+      
     }
     ?>
- </script>
+</script>

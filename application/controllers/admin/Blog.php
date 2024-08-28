@@ -20,7 +20,9 @@ class Blog extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('adminpanel/viewBlog');
+   $query = $this->db->query("SELECT * FROM `articles` ORDER BY blogId DESC ");
+   $data['result']= $query->result_array();
+	 $this->load->view('adminpanel/viewBlog',$data);
 	}
 
     function addBlog() {
@@ -73,4 +75,11 @@ class Blog extends CI_Controller {
             //image is not passed
         }
     }
+
+    function editBlog($blog_id) {
+      print_r($blog_id);
+  }
+  function deleteBlog($blog_id) {
+    print_r($blog_id);
+}
 }
