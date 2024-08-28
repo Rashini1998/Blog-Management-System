@@ -17,11 +17,11 @@
   <form class="form-signin" action="<?= base_url() . 'admin/login/login_post' ?>" method="POST">
 
     <?php
-    if ($error != "No Error") {
-      echo '<div class="alert alert-danger" role="alert">';
-      echo '$error';
-      echo '</div>';
-    }
+      if ($error != "No_Error") {
+        echo '<div class="alert alert-danger" role="alert">';
+        echo "$error";
+        echo '</div>';
+      }
     ?>
 
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>

@@ -8,15 +8,16 @@ class Login extends CI_Controller {
 		if(isset($_SESSION['user_id'])){
 			redirect('admin/dashboard');
 		}
+
 		$data=[];
 		if(isset($_SESSION['error'])){
 			// die($_SESSION['error']);
 			$data['error']=$_SESSION['error'];
 
 		}else{
-			$data['error']="No Error";
+			$data['error']="No_Error";
 		}
-		$this->load->view('adminpanel/loginview');
+		$this->load->view('adminpanel/loginview',$data);
 	}
 
 	function login_post(){
