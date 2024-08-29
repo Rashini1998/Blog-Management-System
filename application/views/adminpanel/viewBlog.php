@@ -35,10 +35,10 @@
                          <img src='".base_url().$value['blog_img']."' class='img-fluid' width='100'/>
                     </td>
                     <td>
-                        <a class=\"btn btn-success\" href=\" <?= base_url().'admin/Blog/editBlog/1'?>\">Edit</a>
+                        <a class=\"btn btn-success\" href='".base_url().'admin/Blog/editBlog/1'."'>Edit</a>
                 </td>
                 <td>
-                    <a class=\"btn btn-danger\" href=\" <?= base_url().'admin/Blog/deleteBlog/1'?>\">Delete</a>
+                    <a class=\"btn btn-danger\" href='".base_url().'admin/Blog/deleteBlog/1'."'>Delete</a>
                 </td>
                 </tr>
                 ";
@@ -66,3 +66,4 @@
 </div>
 
 <?php $this->load->view('adminpanel/footer');?>
+
