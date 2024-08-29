@@ -79,7 +79,19 @@ class Blog extends CI_Controller {
     function editBlog($blog_id) {
       print_r($blog_id);
   }
-  function deleteBlog($blog_id) {
-    print_r($blog_id);
+  function deleteBlog() {
+
+//     Array
+// (
+//     [delete_id] => 5
+// )
+
+    $delete_id = $_POST['delete_id'];
+    $query = $this->db->query("DELETE FROM `articles` WHERE `blogId`= '$delete_id'");
+    if($query){
+      echo "Deleted";
+    }else{
+      echo "Not Deleted";
+    }
 }
 }

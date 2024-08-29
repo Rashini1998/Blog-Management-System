@@ -38,7 +38,7 @@
                         <a class=\"btn btn-success\" href='".base_url().'admin/Blog/editBlog/1'."'>Edit</a>
                 </td>
                 <td>
-                    <a class=\"btn btn-danger\" href='".base_url().'admin/Blog/deleteBlog/1'."'>Delete</a>
+                    <a class=\"btn delete btn-danger\" href='#.' data-id = '".$value['blogId']."'>Delete</a>
                 </td>
                 </tr>
                 ";
@@ -66,4 +66,35 @@
 </div>
 
 <?php $this->load->view('adminpanel/footer');?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+<script>
+        $(".delete").click(function(){
+            var delete_id = $(this).attr('data-id');
+            var bool = confirm("Are You Sure You Want to Delete?");
+            if(bool){
+                alert("Move to delete functionality using AJAX");
+                //AJAX Method to delete.....
+                $.ajax({
+                    url:'<?= base_url().'admin/blog/deleteBlog/'?>',
+                    type:'post',
+                    data:{'delete_id': delete_id},
+                    success:function(response){
+                        console.log(response);
+                        if(response=='Deleted'){
+                            //reload the page
+                            location.reload();
+                        }else if(response=='Not Deleted'){
+                            alert ("Something went wrong.");
+
+                        }
+
+                    }
+                })
+
+            }else{
+                alert("Your blog is safe.");
+            }
+            
+        })
+</script>
