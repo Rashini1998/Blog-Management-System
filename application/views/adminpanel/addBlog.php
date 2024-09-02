@@ -11,10 +11,9 @@
             <input type="text" class="form-control" id="blog_title" placeholder="Title" name="blog_title">
         </div>
         <div class="form-group">
-            <label for="blog_desc">Image Description</label>
+            <label for="blog_desc">Description</label>
             <!-- <input type="text" class="form-control" id="blog_desc" placeholder="Description"> -->
-            <textarea class="form-control" rows="3" id="blog_desc" placeholder="Description"
-                name="blog_desc"></textarea>
+            <textarea class="form-control" rows="3" id="blog_desc" placeholder="Description" name="blog_desc"></textarea>
         </div>
         <div class="form-group">
             <label for="blog_img">Image</label>
@@ -43,4 +42,12 @@
       
     }
     ?>
+</script>
+
+<!-- <script src="https://cdn.ckeditor.com/4.25.0-lts/standard/ckeditor.js"></script> -->
+<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+
+
+<script>
+CKEDITOR.replace('blog_desc');
 </script>

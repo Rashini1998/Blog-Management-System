@@ -26,7 +26,7 @@ window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.
       <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script type="text/javascript" src="https://getbootstrap.com/docs/4.4/examples/dashboard/dashboard.js"></script>
-    <script>
+    <!-- <script>
   // Wait for the DOM to fully load
   document.addEventListener("DOMContentLoaded", function () {
     // Get all nav links
@@ -53,7 +53,7 @@ window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.
       }
     });
   });
-</script>
+</script> -->
 
   </body>
 </html>
