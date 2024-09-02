@@ -11,8 +11,14 @@
 
     <h2>Edit Blog</h2>
     <form enctype="multipart/form-data" action="<?= base_url().'admin/Blog/editblog_post'?>" method="post">
+
+    <select class="custom-select" name="publish_unpublished">
+        <option value="1" <?= ($result[0]['status'] == '1'?"selected":"");?>>Published</option>
+        <option value="0" <?= ($result[0]['status'] == '0'?"selected":"");?>>Unpublished</option>
+    </select><br>
+
 <input type="hidden" name="blog_id" value="<?= $blog_id?>">
-        <div class="form-group">
+        <div class="form-group" style="margin-top:10px ;">
             <label for="blog_title">Title</label>
             <input value="<?= $result[0]['blog_title']?>" type="text" class="form-control" id="blog_title" placeholder="Title" name="blog_title">
         </div>
