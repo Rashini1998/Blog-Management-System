@@ -18,7 +18,7 @@
       </div> -->
       <div div class="card-deck mx-auto"style="width: 50%; " >
            <div class="card" style="width: 18rem; ">
-        <img class="card-img-top" src="../assets/upload/blogimg/view.avif" alt="Card image cap" >
+        <img class="card-img-top" src="<?= base_url().'assets/upload/blogimg/view.avif'?>"  alt="Card image cap" >
         <div class="card-body">
             <h5 class="card-title">View Blogs</h5>
             <p class="card-text">You Can View Blogs here!</p>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="card" style="width: 18rem; ">
-        <img class="card-img-top" src="../assets/upload/blogimg/upload.jpg" alt="Card image cap" >
+        <img class="card-img-top" src="<?= base_url().'assets/upload/blogimg/upload.jpg'?>" alt="Card image cap" >
         <div class="card-body">
             <h5 class="card-title">Add Blogs</h5>
             <p class="card-text">You Can Add Blogs here!</p>
