@@ -22,12 +22,14 @@ class Home extends CI_Controller {
 	{
 		$this->load->model('ArticleModel',"am");
 		$result=$this->am->fetch_articles();
-//		print_r($result);die();
 		$data['result']=$result;
-
 		$this->load->view('blog_home_page',$data);
 	}
-	public function blog_detail($blog_id=0){
-
+	public function blog_detail($blog_id=0)
+	{
+		$this->load->model('ArticleModel',"am");
+		$result=$this->am->fetch_blog_detail($blog_id);
+		$data['result']=$result;
+		$this->load->view('blog_detail_view',$data);
 	}
 }
