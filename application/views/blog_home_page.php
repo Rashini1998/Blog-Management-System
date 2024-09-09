@@ -18,7 +18,7 @@
 	<!-- Custom styles for this template -->
 	<link href="album.css" rel="stylesheet">
 
-	<title>Hello, world!</title>
+	<title>Article View</title>
 </head>
 
 <body>

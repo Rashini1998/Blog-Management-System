@@ -18,7 +18,7 @@
 	<!-- Custom styles for this template -->
 	<link href="album.css" rel="stylesheet">
 
-	<title>Hello, world!</title>
+	<title><?= $result[0]['blog_title']?></title>
 </head>
 
 <body>
@@ -45,7 +45,7 @@
 	</div>
 	<div class="navbar navbar-dark bg-dark box-shadow">
 		<div class="container d-flex justify-content-between">
-			
+			<button type="button" class="btn btn-default" onclick="goBack()">< Back</button>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
 					aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -118,6 +118,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 </script>
+<script>
+	function goBack() {
+		window.history.back();
+	}
+</script>
+
 </body>
 
 </html>
